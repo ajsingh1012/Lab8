@@ -60,4 +60,18 @@ public class CustomListTest {
         assertTrue(list.hasCity(city));
     }
 
+    /**
+     * get whether a city is in the list
+     * increase the list by adding a new city
+     * check if city being in the list matches hasCity
+     */
+    @Test
+    public void deleteCityTest(){
+        list = MockCityList();
+        City city = MockCity();
+        list.addCity(city);
+        list.deleteCity(city);
+        assertEquals(list.getCount(), 0);
+    }
+
 }
