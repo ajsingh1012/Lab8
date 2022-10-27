@@ -78,9 +78,8 @@ public class CustomListTest {
     }
 
     /**
-     * check deletion functionality of city
-     * make an arraylist with a mock city to ensure it has the right arraylist base
-     * check if city is still in the list by checking size
+     * check deletion error throwing functionality of city
+     * try to delete from empty list to ensure throws the right error
      */
     @Test
     public void deleteCityTestThrows(){
@@ -95,15 +94,15 @@ public class CustomListTest {
      * instantiate an empty arraylist and add a mock city to it to ensure it has the city
      * check before and after adding the city that its size matches the intuitive number
      */
-    /*@Test
+    @Test
     public void countCitiesTest(){
         list = MockCityList();
         City city = MockCity();
+        assertEquals(list.countCities(), 0);
 
-
-        list.deleteCity(city);
-        assertEquals(list.getCount(), 0);
-    }*/
+        list.addCity(city);
+        assertEquals(list.countCities(), 1);
+    }
 
 
 
