@@ -67,9 +67,11 @@ public class CustomListTest {
      */
     @Test
     public void deleteCityTest(){
-        list = MockCityList();
+        ArrayList<City> cityList = new ArrayList<>();
         City city = MockCity();
-        list.addCity(city);
+        cityList.add(city);
+
+        list = new CustomList(null, cityList);
         list.deleteCity(city);
         assertEquals(list.getCount(), 0);
     }
